@@ -14,6 +14,7 @@
 		4664257C2C637A7C0004F22B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257B2C637A7C0004F22B /* LoginView.swift */; };
 		4664257E2C63AD7E0004F22B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257D2C63AD7E0004F22B /* Extensions.swift */; };
 		466425802C64BC1F0004F22B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257F2C64BC1F0004F22B /* SignUpView.swift */; };
+		466425832C6512370004F22B /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425822C6512370004F22B /* InboxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4664257B2C637A7C0004F22B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4664257D2C63AD7E0004F22B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4664257F2C64BC1F0004F22B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		466425822C6512370004F22B /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				466425782C637A2E0004F22B /* Authenication */,
+				466425812C6511FC0004F22B /* Inbox */,
 				466425792C637A390004F22B /* Root */,
 			);
 			path = Core;
@@ -138,6 +141,14 @@
 				4664257F2C64BC1F0004F22B /* SignUpView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		466425812C6511FC0004F22B /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				466425822C6512370004F22B /* InboxView.swift */,
+			);
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4664257C2C637A7C0004F22B /* LoginView.swift in Sources */,
+				466425832C6512370004F22B /* InboxView.swift in Sources */,
 				466425802C64BC1F0004F22B /* SignUpView.swift in Sources */,
 				466425682C6379830004F22B /* ContentView.swift in Sources */,
 				466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */,

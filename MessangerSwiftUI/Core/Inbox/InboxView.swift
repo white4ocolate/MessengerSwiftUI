@@ -12,6 +12,14 @@ struct InboxView: View {
         NavigationStack {
             ScrollView {
                 ActiveNowView()
+                List {
+                    ForEach( 0 ... 10, id: \.self) { message in
+                        InboxRow()
+                    }
+                }
+                .listStyle(.plain)
+                .frame(height: (UIScreen.current?.bounds.height)! - 120)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -31,7 +39,6 @@ struct InboxView: View {
                             .frame(width: 35, height: 35)
                             .foregroundStyle(.black, Color(.systemGray5))
                     }
-
                 }
             }
         }

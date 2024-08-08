@@ -11,7 +11,7 @@ struct InboxView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                
+                ActiveNowView()
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

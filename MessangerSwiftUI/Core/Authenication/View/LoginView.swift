@@ -14,7 +14,6 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                
                 Spacer()
                 
                 //login image
@@ -70,11 +69,9 @@ struct LoginView: View {
                 HStack {
                     Rectangle()
                         .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40 , height: 0.5)
-                    
                     Text("OR")
                         .font(.footnote)
                         .fontWeight(.semibold)
-                    
                     Rectangle()
                         .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40 , height: 0.5)
                 }
@@ -84,22 +81,19 @@ struct LoginView: View {
                     Image("facebook")
                         .resizable()
                         .frame(width: 25, height: 25)
-                    
                     Text("Continue with Facebook")
                         .font(.footnote)
                         .fontWeight(.semibold)
                         .foregroundStyle(Color(.systemBlue))
                 }
                 .padding(.top, 8)
-                
                 Spacer()
                 
                 // sign up
-                
                 Divider()
-                
                 NavigationLink {
-                    Text("Sign Up View")
+                    SignUpView()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     HStack(spacing: 3) {
                         Text("Don't have an account?")

@@ -13,6 +13,7 @@
 		4664256D2C6379840004F22B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4664256C2C6379840004F22B /* Preview Assets.xcassets */; };
 		4664257C2C637A7C0004F22B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257B2C637A7C0004F22B /* LoginView.swift */; };
 		4664257E2C63AD7E0004F22B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257D2C63AD7E0004F22B /* Extensions.swift */; };
+		466425802C64BC1F0004F22B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257F2C64BC1F0004F22B /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4664256C2C6379840004F22B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4664257B2C637A7C0004F22B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4664257D2C63AD7E0004F22B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4664257F2C64BC1F0004F22B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				4664257B2C637A7C0004F22B /* LoginView.swift */,
+				4664257F2C64BC1F0004F22B /* SignUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4664257C2C637A7C0004F22B /* LoginView.swift in Sources */,
+				466425802C64BC1F0004F22B /* SignUpView.swift in Sources */,
 				466425682C6379830004F22B /* ContentView.swift in Sources */,
 				466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */,
 				4664257E2C63AD7E0004F22B /* Extensions.swift in Sources */,

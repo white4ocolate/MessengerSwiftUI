@@ -19,6 +19,7 @@
 		466425882C6522530004F22B /* InboxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425872C6522530004F22B /* InboxRow.swift */; };
 		4664258B2C6631DF0004F22B /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664258A2C6631DF0004F22B /* NewMessageView.swift */; };
 		466425902C665CE70004F22B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664258F2C665CE70004F22B /* ProfileView.swift */; };
+		466425922C6669490004F22B /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425912C6669490004F22B /* SettingsOptionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		466425872C6522530004F22B /* InboxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRow.swift; sourceTree = "<group>"; };
 		4664258A2C6631DF0004F22B /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		4664258F2C665CE70004F22B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		466425912C6669490004F22B /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		4664258E2C665CCC0004F22B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				466425912C6669490004F22B /* SettingsOptionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				466425802C64BC1F0004F22B /* SignUpView.swift in Sources */,
 				466425682C6379830004F22B /* ContentView.swift in Sources */,
 				466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */,
+				466425922C6669490004F22B /* SettingsOptionsViewModel.swift in Sources */,
 				4664257E2C63AD7E0004F22B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

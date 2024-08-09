@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InboxView: View {
+    @State private var showNewMessageView = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -21,6 +23,10 @@ struct InboxView: View {
                 .frame(height: (UIScreen.current?.bounds.height)! - 120)
                 
             }
+            //when showNewMessageView changes to true this func will trigger and show us the new message view
+            .fullScreenCover(isPresented: $showNewMessageView, content: {
+                NewMessageView()
+            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     HStack {
@@ -32,7 +38,7 @@ struct InboxView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        print("open new chat view")
+                        showNewMessageView.toggle()
                     } label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()

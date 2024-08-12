@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35222C6A0A88000450CD /* ProfileViewModel.swift */; };
+		465F35252C6A2114000450CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35242C6A2114000450CD /* User.swift */; };
 		466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425652C6379830004F22B /* MessangerSwiftUIApp.swift */; };
 		466425682C6379830004F22B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425672C6379830004F22B /* ContentView.swift */; };
 		4664256A2C6379840004F22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466425692C6379840004F22B /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		465F35222C6A0A88000450CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		465F35242C6A2114000450CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		466425622C6379830004F22B /* MessangerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessangerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		466425652C6379830004F22B /* MessangerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerSwiftUIApp.swift; sourceTree = "<group>"; };
 		466425672C6379830004F22B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		466425752C6379C20004F22B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				465F35242C6A2114000450CD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465F35252C6A2114000450CD /* User.swift in Sources */,
 				4664258B2C6631DF0004F22B /* NewMessageView.swift in Sources */,
 				4664257C2C637A7C0004F22B /* LoginView.swift in Sources */,
 				466425902C665CE70004F22B /* ProfileView.swift in Sources */,

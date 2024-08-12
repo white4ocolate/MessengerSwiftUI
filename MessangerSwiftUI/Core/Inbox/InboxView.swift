@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InboxView: View {
     @State private var showNewMessageView = false
-    
+    @State private var user = User.MOCK_USER
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -23,6 +23,9 @@ struct InboxView: View {
                 .frame(height: (UIScreen.current?.bounds.height)! - 120)
                 
             }
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileView(user: user)
+            })
             //when showNewMessageView changes to true this func will trigger and show us the new message view
             .fullScreenCover(isPresented: $showNewMessageView, content: {
                 NewMessageView()
@@ -30,7 +33,13 @@ struct InboxView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     HStack {
-                        Image(systemName: "person.circle.fill")
+                        NavigationLink(value: user) {
+                            Image(user.profileImageUrl ?? "")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 35, height: 35)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        }
                         Text("Chats")
                             .font(.title)
                             .fontWeight(.semibold)

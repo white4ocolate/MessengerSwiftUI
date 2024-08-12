@@ -6,25 +6,37 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewModel()
+    
     var body: some View {
         VStack {
-            
             //header
             VStack {
-                ZStack(alignment: .bottomTrailing) {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .frame(width: 80, height: 80)
-                        .foregroundStyle(Color(.systemGray4))
-                    ZStack {
-                        Circle()
-                            .frame(width: 25, height: 25)
-                            .foregroundStyle(.white)
-                        Circle()
-                            .frame(width: 15, height: 15)
-                            .foregroundStyle(.green)
+                PhotosPicker(selection: $viewModel.selectedItem) {
+                    ZStack(alignment: .bottomTrailing) {
+                        if let profileImage = viewModel.profileImage {
+                            profileImage
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .foregroundStyle(Color(.systemGray4))
+                        }
+                        ZStack {
+                            Circle()
+                                .frame(width: 25, height: 25)
+                                .foregroundStyle(.white)
+                            Circle()
+                                .frame(width: 15, height: 15)
+                                .foregroundStyle(.green)
+                        }
                     }
                 }
                 Text("Bruce Wayne")

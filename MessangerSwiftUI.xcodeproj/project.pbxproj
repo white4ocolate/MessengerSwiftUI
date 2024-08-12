@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35222C6A0A88000450CD /* ProfileViewModel.swift */; };
 		466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425652C6379830004F22B /* MessangerSwiftUIApp.swift */; };
 		466425682C6379830004F22B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425672C6379830004F22B /* ContentView.swift */; };
 		4664256A2C6379840004F22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466425692C6379840004F22B /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		465F35222C6A0A88000450CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		466425622C6379830004F22B /* MessangerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessangerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		466425652C6379830004F22B /* MessangerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerSwiftUIApp.swift; sourceTree = "<group>"; };
 		466425672C6379830004F22B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		4664258E2C665CCC0004F22B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				465F35222C6A0A88000450CD /* ProfileViewModel.swift */,
 				466425912C6669490004F22B /* SettingsOptionsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -282,6 +285,7 @@
 				466425882C6522530004F22B /* InboxRow.swift in Sources */,
 				466425862C6515B30004F22B /* ActiveNowView.swift in Sources */,
 				466425832C6512370004F22B /* InboxView.swift in Sources */,
+				465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */,
 				466425802C64BC1F0004F22B /* SignUpView.swift in Sources */,
 				466425682C6379830004F22B /* ContentView.swift in Sources */,
 				466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */,

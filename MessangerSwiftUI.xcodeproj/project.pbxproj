@@ -10,6 +10,7 @@
 		465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35222C6A0A88000450CD /* ProfileViewModel.swift */; };
 		465F35252C6A2114000450CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35242C6A2114000450CD /* User.swift */; };
 		465F352A2C6A4F7C000450CD /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35292C6A4F7C000450CD /* CircularProfileImageView.swift */; };
+		465F352D2C6B53C4000450CD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F352C2C6B53C4000450CD /* ChatView.swift */; };
 		466425662C6379830004F22B /* MessangerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425652C6379830004F22B /* MessangerSwiftUIApp.swift */; };
 		466425682C6379830004F22B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425672C6379830004F22B /* ContentView.swift */; };
 		4664256A2C6379840004F22B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466425692C6379840004F22B /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		465F35222C6A0A88000450CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		465F35242C6A2114000450CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		465F35292C6A4F7C000450CD /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
+		465F352C2C6B53C4000450CD /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		466425622C6379830004F22B /* MessangerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessangerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		466425652C6379830004F22B /* MessangerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessangerSwiftUIApp.swift; sourceTree = "<group>"; };
 		466425672C6379830004F22B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 				465F35292C6A4F7C000450CD /* CircularProfileImageView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		465F352B2C6B53B3000450CD /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				465F352C2C6B53C4000450CD /* ChatView.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		466425592C6379830004F22B = {
@@ -130,6 +140,7 @@
 			children = (
 				466425842C65159C0004F22B /* ActiveNow */,
 				466425782C637A2E0004F22B /* Authenication */,
+				465F352B2C6B53B3000450CD /* Chat */,
 				465F35262C6A4A7B000450CD /* Components */,
 				466425812C6511FC0004F22B /* Inbox */,
 				466425892C6631B90004F22B /* NewMessage */,
@@ -300,6 +311,7 @@
 				466425882C6522530004F22B /* InboxRow.swift in Sources */,
 				466425862C6515B30004F22B /* ActiveNowView.swift in Sources */,
 				466425832C6512370004F22B /* InboxView.swift in Sources */,
+				465F352D2C6B53C4000450CD /* ChatView.swift in Sources */,
 				465F352A2C6A4F7C000450CD /* CircularProfileImageView.swift in Sources */,
 				465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */,
 				466425802C64BC1F0004F22B /* SignUpView.swift in Sources */,
@@ -446,8 +458,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,8 +488,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

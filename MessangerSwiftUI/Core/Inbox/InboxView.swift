@@ -16,7 +16,12 @@ struct InboxView: View {
                 ActiveNowView()
                 List {
                     ForEach( 0 ... 10, id: \.self) { message in
-                        InboxRow()
+                        NavigationLink {
+                            ChatView()
+                                .navigationBarBackButtonHidden()
+                        } label: {
+                            InboxRow()
+                        }
                     }
                 }
                 .listStyle(.plain)

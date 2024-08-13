@@ -9,19 +9,40 @@ import SwiftUI
 
 struct ChatView: View {
     @State private var messageText = ""
+    @Environment (\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
+            HStack {
+                Button {
+                    dismiss()
+                } label: {
+                     Image(systemName: "lessthan")
+                        .resizable()
+                        .frame(width: 13, height: 20)
+                }
+                .frame(width: 40)
+                
+                Spacer()
+                
+                VStack(alignment: .center) {
+                    Text(User.MOCK_USER.fullname)
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                    Text("Online")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                }
+                
+                Spacer()
+                
+                CircularProfileImageView(user: User.MOCK_USER, size: .s)
+            }
+            .padding(8)
+             
             ScrollView {
-                VStack{
-                    CircularProfileImageView(user: User.MOCK_USER, size: .xl)
-                    VStack(spacing: 4) {
-                        Text(User.MOCK_USER.fullname)
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                        Text("Messenger")
-                            .font(.footnote)
-                            .foregroundStyle(.gray)
-                    }
+                ForEach(0...14, id: \.self) {_ in
+                    ChatMessageCell(isFromCurrentUser: Bool.random())
                 }
             }
             

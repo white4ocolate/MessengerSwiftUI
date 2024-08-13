@@ -15,9 +15,9 @@ struct SignUpView: View {
     
     var body: some View {
         VStack {
+            
             Spacer()
             
-            //login image
             Image("messenger_logo")
                 .resizable()
                 .scaledToFit()
@@ -59,9 +59,9 @@ struct SignUpView: View {
                     .clipShape(.rect(cornerRadius: 10))
             })
             .padding(.vertical)
+            
             Spacer()
             
-            // sign in
             Divider()
             Button {
                 dismiss()

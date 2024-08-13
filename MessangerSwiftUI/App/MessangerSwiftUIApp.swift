@@ -11,7 +11,7 @@ import SwiftUI
 struct MessangerSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ChatView()
+            InboxView()
         }
     }
 }

@@ -14,9 +14,9 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                
                 Spacer()
                 
-                //login image
                 Image("messenger_logo")
                     .resizable()
                     .scaledToFit()
@@ -87,9 +87,9 @@ struct LoginView: View {
                         .foregroundStyle(Color(.systemBlue))
                 }
                 .padding(.top, 8)
+                
                 Spacer()
                 
-                // sign up
                 Divider()
                 NavigationLink {
                     SignUpView()

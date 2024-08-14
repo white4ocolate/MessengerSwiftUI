@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationStack {
@@ -25,13 +24,13 @@ struct LoginView: View {
                 
                 //text fields
                 VStack(spacing: 12) {
-                    TextField("Enter your email", text: $email)
+                    TextField("Enter your email", text: $viewModel.email)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
                         .clipShape(.rect(cornerRadius: 10))
                         .padding(.horizontal, 24)
-                    SecureField("Enter your password", text: $password)
+                    SecureField("Enter your password", text: $viewModel.password)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray6))
@@ -53,7 +52,7 @@ struct LoginView: View {
                 
                 //login button
                 Button(action: {
-                    print("Pressed Login")
+                    Task { try await viewModel.login() }
                 }, label: {
                     Text("Login")
                         .font(.subheadline)
@@ -68,12 +67,12 @@ struct LoginView: View {
                 //sign in facebook
                 HStack {
                     Rectangle()
-                        .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40 , height: 0.5)
+                        .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40, height: 0.5)
                     Text("OR")
                         .font(.footnote)
                         .fontWeight(.semibold)
                     Rectangle()
-                        .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40 , height: 0.5)
+                        .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40, height: 0.5)
                 }
                 .foregroundStyle(.gray)
                 

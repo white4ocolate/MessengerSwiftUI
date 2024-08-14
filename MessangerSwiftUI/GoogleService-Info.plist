@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDEdOs8-l_d5x9zKDOCFg1rgIwRpa_xRO4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>37111607487</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>whitechocolate.MessangerSwiftUI</string>
+	<key>PROJECT_ID</key>
+	<string>messenger-d7ac0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>messenger-d7ac0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:37111607487:ios:656f39e3bac1e38ebb160a</string>
+</dict>
+</plist>

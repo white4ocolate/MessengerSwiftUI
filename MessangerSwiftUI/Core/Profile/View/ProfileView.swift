@@ -53,14 +53,12 @@ struct ProfileView: View {
                             Text(option.title)
                                 .font(.subheadline)
                         }
-                        
                     }
-                    
                 }
                 
                 Section {
                     Button("Log Out") {
-                        print("Log out")
+                        AuthService.shared.signOut()
                     }
                     Button("Delete Account") {
                         print("Delete Account")

@@ -34,6 +34,7 @@
 		46BF66D62C6BE633009FF665 /* RegisrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF66D52C6BE633009FF665 /* RegisrationViewModel.swift */; };
 		46BF66D82C6BE656009FF665 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF66D72C6BE656009FF665 /* AuthService.swift */; };
 		46BF66DC2C6CD4CE009FF665 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF66DB2C6CD4CE009FF665 /* ContentViewModel.swift */; };
+		46BF716E2C6E27FC007E3A34 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF716D2C6E27FC007E3A34 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		46BF66D52C6BE633009FF665 /* RegisrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisrationViewModel.swift; sourceTree = "<group>"; };
 		46BF66D72C6BE656009FF665 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		46BF66DB2C6CD4CE009FF665 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		46BF716D2C6E27FC007E3A34 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		466425742C6379C00004F22B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				46BF716D2C6E27FC007E3A34 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				466425902C665CE70004F22B /* ProfileView.swift in Sources */,
 				466425882C6522530004F22B /* InboxRow.swift in Sources */,
 				465F352F2C6B93FC000450CD /* ChatMessageCell.swift in Sources */,
+				46BF716E2C6E27FC007E3A34 /* UserService.swift in Sources */,
 				466425862C6515B30004F22B /* ActiveNowView.swift in Sources */,
 				46BF66D82C6BE656009FF665 /* AuthService.swift in Sources */,
 				466425832C6512370004F22B /* InboxView.swift in Sources */,

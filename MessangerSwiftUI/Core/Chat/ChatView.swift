@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     @State private var messageText = ""
+    let user: User
     @Environment (\.dismiss) var dismiss
     
     var body: some View {
@@ -26,7 +27,7 @@ struct ChatView: View {
                 Spacer()
                 
                 VStack(alignment: .center) {
-                    Text(User.MOCK_USER.fullname)
+                    Text(user.fullname)
                         .font(.title3)
                         .fontWeight(.semibold)
                     Text("Online")
@@ -36,7 +37,7 @@ struct ChatView: View {
                 
                 Spacer()
                 
-                CircularProfileImageView(user: User.MOCK_USER, size: .s)
+                CircularProfileImageView(user: user, size: .s)
             }
             .padding(8)
              
@@ -81,5 +82,5 @@ struct ChatView: View {
 }
 
 #Preview {
-    ChatView()
+    ChatView(user: User.MOCK_USER)
 }

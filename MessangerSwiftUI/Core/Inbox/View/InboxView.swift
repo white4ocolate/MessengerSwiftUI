@@ -10,6 +10,9 @@ import SwiftUI
 struct InboxView: View {
     @State private var showNewMessageView = false
     @StateObject var viewModel = InboxViewModel()
+    @State private var selectedUser: User?
+    @State private var showChat = false
+    
     private var user: User? {
         return viewModel.currentUser
     }
@@ -20,24 +23,27 @@ struct InboxView: View {
                 ActiveNowView()
                 List {
                     ForEach( 0 ... 10, id: \.self) { message in
-                        NavigationLink {
-                            ChatView()
-                                .navigationBarBackButtonHidden()
-                        } label: {
-                            InboxRow()
-                        }
+                        InboxRow()
                     }
                 }
                 .listStyle(.plain)
                 .frame(height: (UIScreen.current?.bounds.height)! - 120)
                 
             }
+            .onChange(of: selectedUser, perform: { newValue in
+                showChat = newValue != nil
+            })
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
-            //when showNewMessageView changes to true this func will trigger and show us the new message view
+            .navigationDestination(isPresented: $showChat, destination: {
+                if let user = selectedUser {
+                    ChatView(user: user)
+                        .navigationBarBackButtonHidden()
+                }
+            })
             .fullScreenCover(isPresented: $showNewMessageView, content: {
-                NewMessageView()
+                NewMessageView(selectedUser: $selectedUser)
             })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ChatMessageCell: View {
-    let isFromCurrentUser: Bool
+    let message: Message
+    private var isFromCurrentUser: Bool {
+        return message.isFromCurrentUser
+    }
+    
     var body: some View {
         HStack {
-            if isFromCurrentUser {
+            if isFromCurrentUser  {
                 
                 Spacer()
                 
-                Text("This is the test message for now longer text where we see how it's now and maybe later. Because people love typing big text in one message. If this background lokks like circle we should change it on rectangle")
+                Text(message.messageText)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemBlue))
@@ -23,7 +27,7 @@ struct ChatMessageCell: View {
                     .clipShape(MessageBubble(isFromCurrentUser: isFromCurrentUser))
                     .frame(maxWidth: ((UIScreen.current?.bounds.width)!) / 1.2, alignment: .trailing)
             } else {
-                Text("This is the test message for now longer text where we see how it's now and maybe later. Because people love typing big text in one message. If this background lokks like circle we should change it on rectangle ")
+                Text(message.messageText)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -37,8 +41,4 @@ struct ChatMessageCell: View {
         }
         .padding(.horizontal, 8)
     }
-}
-
-#Preview {
-    ChatMessageCell(isFromCurrentUser: true)
 }

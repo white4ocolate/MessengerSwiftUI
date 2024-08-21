@@ -47,8 +47,8 @@ struct ChatView: View {
             .padding(8)
              
             ScrollView {
-                ForEach(0...14, id: \.self) {_ in
-                    ChatMessageCell(isFromCurrentUser: Bool.random())
+                ForEach(viewModel.messages) { message in
+                    ChatMessageCell(message: message)
                 }
             }
             

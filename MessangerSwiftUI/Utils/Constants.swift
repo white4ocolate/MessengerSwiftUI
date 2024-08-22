@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 struct FirestoreConstants {
     static let USERS_COLLECTION = Firestore.firestore().collection("users")

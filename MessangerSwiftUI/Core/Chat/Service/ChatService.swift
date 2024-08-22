@@ -18,8 +18,10 @@ struct ChatService {
         
         let currentUserRef = FirestoreConstants.MESSAGES_COLLECTION.document(currentUid).collection(chatPartnerId).document()
         let chatPartnerRef = FirestoreConstants.MESSAGES_COLLECTION.document(chatPartnerId).collection(currentUid)
-        let messageId = currentUserRef.documentID
+        let lastCurrentUserRef = FirestoreConstants.MESSAGES_COLLECTION.document(currentUid).collection("last-message").document(chatPartnerId)
+        let lastPartnerRef = FirestoreConstants.MESSAGES_COLLECTION.document(chatPartnerId).collection("last-message").document(currentUid)
         
+        let messageId = currentUserRef.documentID
         let message = Message(messageId: messageId,
                               fromUserId: currentUid,
                               toUserId: chatPartnerId,
@@ -28,6 +30,9 @@ struct ChatService {
         guard let messageData = try? Firestore.Encoder().encode(message) else { return }
         currentUserRef.setData(messageData)
         chatPartnerRef.document(messageId).setData(messageData)
+        
+        lastCurrentUserRef.setData(messageData)
+        lastPartnerRef.setData(messageData)
     }
     
     func observeMessages(completion: @escaping([Message]) -> Void) {

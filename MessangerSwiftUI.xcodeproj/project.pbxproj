@@ -12,6 +12,7 @@
 		464AE47E2C74CDFC007C9E19 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AE47D2C74CDFC007C9E19 /* ChatViewModel.swift */; };
 		464AE4812C75FFA4007C9E19 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AE4802C75FFA4007C9E19 /* ChatService.swift */; };
 		464AE4842C760467007C9E19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AE4832C760467007C9E19 /* Constants.swift */; };
+		464AE4872C77369A007C9E19 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AE4862C77369A007C9E19 /* InboxService.swift */; };
 		465F35232C6A0A88000450CD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35222C6A0A88000450CD /* ProfileViewModel.swift */; };
 		465F35252C6A2114000450CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35242C6A2114000450CD /* User.swift */; };
 		465F352A2C6A4F7C000450CD /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465F35292C6A4F7C000450CD /* CircularProfileImageView.swift */; };
@@ -28,7 +29,7 @@
 		466425802C64BC1F0004F22B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664257F2C64BC1F0004F22B /* SignUpView.swift */; };
 		466425832C6512370004F22B /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425822C6512370004F22B /* InboxView.swift */; };
 		466425862C6515B30004F22B /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425852C6515B30004F22B /* ActiveNowView.swift */; };
-		466425882C6522530004F22B /* InboxRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425872C6522530004F22B /* InboxRow.swift */; };
+		466425882C6522530004F22B /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425872C6522530004F22B /* InboxRowView.swift */; };
 		4664258B2C6631DF0004F22B /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664258A2C6631DF0004F22B /* NewMessageView.swift */; };
 		466425902C665CE70004F22B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664258F2C665CE70004F22B /* ProfileView.swift */; };
 		466425922C6669490004F22B /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466425912C6669490004F22B /* SettingsOptionsViewModel.swift */; };
@@ -50,6 +51,7 @@
 		464AE47D2C74CDFC007C9E19 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		464AE4802C75FFA4007C9E19 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		464AE4832C760467007C9E19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		464AE4862C77369A007C9E19 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
 		465F35222C6A0A88000450CD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		465F35242C6A2114000450CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		465F35292C6A4F7C000450CD /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		4664257F2C64BC1F0004F22B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		466425822C6512370004F22B /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		466425852C6515B30004F22B /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
-		466425872C6522530004F22B /* InboxRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRow.swift; sourceTree = "<group>"; };
+		466425872C6522530004F22B /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 		4664258A2C6631DF0004F22B /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		4664258F2C665CE70004F22B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		466425912C6669490004F22B /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				464AE4832C760467007C9E19 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		464AE4852C773685007C9E19 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				464AE4862C77369A007C9E19 /* InboxService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		465F35262C6A4A7B000450CD /* Components */ = {
@@ -266,6 +276,7 @@
 		466425812C6511FC0004F22B /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				464AE4852C773685007C9E19 /* Service */,
 				46BF71702C6E371D007E3A34 /* View */,
 				46BF716F2C6E370B007E3A34 /* ViewModel */,
 			);
@@ -360,7 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				466425822C6512370004F22B /* InboxView.swift */,
-				466425872C6522530004F22B /* InboxRow.swift */,
+				466425872C6522530004F22B /* InboxRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,13 +471,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464AE4872C77369A007C9E19 /* InboxService.swift in Sources */,
 				465F35252C6A2114000450CD /* User.swift in Sources */,
 				464AE47A2C74BB52007C9E19 /* MessageService.swift in Sources */,
 				4664258B2C6631DF0004F22B /* NewMessageView.swift in Sources */,
 				4664257C2C637A7C0004F22B /* LoginView.swift in Sources */,
 				466425902C665CE70004F22B /* ProfileView.swift in Sources */,
 				464AE4842C760467007C9E19 /* Constants.swift in Sources */,
-				466425882C6522530004F22B /* InboxRow.swift in Sources */,
+				466425882C6522530004F22B /* InboxRowView.swift in Sources */,
 				465F352F2C6B93FC000450CD /* ChatMessageCell.swift in Sources */,
 				464AE47E2C74CDFC007C9E19 /* ChatViewModel.swift in Sources */,
 				46BF716E2C6E27FC007E3A34 /* UserService.swift in Sources */,

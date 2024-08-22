@@ -22,8 +22,8 @@ struct InboxView: View {
             ScrollView {
                 ActiveNowView()
                 List {
-                    ForEach( 0 ... 10, id: \.self) { message in
-                        InboxRow()
+                    ForEach(viewModel.lastmessages) { message in
+                        InboxRowView(message: message)
                     }
                 }
                 .listStyle(.plain)

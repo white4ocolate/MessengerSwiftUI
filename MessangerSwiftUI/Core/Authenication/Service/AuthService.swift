@@ -16,18 +16,16 @@ class AuthService {
     init() {
         self.userSession = Auth.auth().currentUser
         loadCurrentUserData()
-        print(">>>DEBUG: user session id is \(self.userSession?.uid)")
     }
     
     @MainActor
     func login(withEmail email: String, password: String) async throws {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
-            print(">>>DEBUG: Login user \(result.user.uid)")
             self.userSession = result.user
             loadCurrentUserData()
         } catch {
-            print(">>>DEBUG: Cant login user beacuse \(error.localizedDescription)")
+            print(">>>Error: Cant login user beacuse \(error.localizedDescription)")
         }
     }
     
@@ -49,7 +47,7 @@ class AuthService {
             self.userSession = nil
             UserService.shared.currentUser = nil
         } catch {
-            print(">>>DEBUG: Cant logout user beacuse \(error.localizedDescription)")
+            print(">>>Error: Cant logout user beacuse \(error.localizedDescription)")
         }
     }
     

@@ -19,19 +19,32 @@ struct InboxView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            List {
                 ActiveNowView()
-                List {
-                    ForEach(viewModel.lastmessages) { message in
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical)
+                    .padding(.horizontal, 4)
+                ForEach(viewModel.lastmessages) { message in
+                    //for hide standard chevron
+                    ZStack {
+                        NavigationLink(value: message) {
+                            EmptyView()
+                        }
+                        .opacity(0.0)
                         InboxRowView(message: message)
                     }
                 }
-                .listStyle(.plain)
-                .frame(height: (UIScreen.current?.bounds.height)! - 120)
-                
             }
+            .listStyle(.plain)
             .onChange(of: selectedUser, perform: { newValue in
                 showChat = newValue != nil
+            })
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                        .navigationBarBackButtonHidden()
+                }
             })
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)

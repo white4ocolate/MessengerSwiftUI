@@ -32,4 +32,12 @@ struct Message: Identifiable, Codable, Hashable {
         return fromUserId == Auth.auth().currentUser?.uid
     }
     
+    var timestampString: String {
+        return timestamp.dateValue().timestampString()
+    }
+    
+}
+
+extension Message {
+    static let MOCK_MESSAGE = Message(fromUserId: "USER TEST", toUserId: "FFejvnwrf", messageText: "Hello", timestamp: Timestamp())
 }

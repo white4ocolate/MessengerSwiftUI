@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 
+@MainActor
 class ProfileViewModel: ObservableObject {
     @Published var selectedItem: PhotosPickerItem? {
         didSet {

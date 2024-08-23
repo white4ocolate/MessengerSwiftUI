@@ -14,6 +14,10 @@ struct User: Codable, Identifiable, Hashable {
     let fullname: String
     let email: String
     var profileImageUrl: String?
+    var firstname: String {
+        var fullSplitName = fullname.split(separator: " ")
+        return String(fullSplitName[0])
+    }
     
     var id: String {
         return uid ?? NSUUID().uuidString

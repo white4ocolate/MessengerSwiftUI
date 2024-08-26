@@ -19,15 +19,15 @@ struct ModeView: View {
                     Image(systemName: "lightbulb.max.fill")
                         .resizable()
                         .frame(width: 24, height: 24)
-                        .foregroundStyle(Color(.white))
-                    Text("Light mode")
+                        .foregroundStyle(Color(.yellow))
+                    Text("Light theme")
                         .font(.subheadline)
                 } else {
                     Image(systemName: "moon.circle.fill")
                         .resizable()
                         .frame(width: 24, height: 24)
                         .foregroundStyle(Color(.black))
-                    Text("Dark mode")
+                    Text("Dark theme")
                         .font(.subheadline)
                 }
             }

@@ -17,7 +17,6 @@ struct ActiveNowView: View {
                         VStack {
                             ZStack(alignment: .bottomTrailing) {
                                 CircularProfileImageView(user: user, size: .m)
-                                
                                 ZStack {
                                     Circle()
                                         .fill(.white)

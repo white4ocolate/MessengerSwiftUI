@@ -84,7 +84,7 @@ struct InboxView: View {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
                             .frame(width: 35, height: 35)
-                            .foregroundStyle(.black, Color(.systemGray5))
+                            .foregroundStyle(Color("foregroundColor"), Color(.systemGray5))
                     }
                 }
             }

@@ -22,10 +22,12 @@ struct MessangerSwiftUIApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .preferredColorScheme(.light) 
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

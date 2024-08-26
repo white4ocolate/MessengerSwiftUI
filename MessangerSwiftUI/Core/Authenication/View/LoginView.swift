@@ -22,7 +22,6 @@ struct LoginView: View {
                     .frame(width: 150, height: 150)
                     .padding()
                 
-                //text fields
                 VStack(spacing: 12) {
                     TextField("Enter your email", text: $viewModel.email)
                         .font(.subheadline)
@@ -38,7 +37,6 @@ struct LoginView: View {
                         .padding(.horizontal, 24)
                 }
                 
-                //forgot password
                 Button(action: {
                     print("Forgot password")
                 }, label: {
@@ -50,7 +48,6 @@ struct LoginView: View {
                 })
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
-                //login button
                 Button(action: {
                     Task { try await viewModel.login() }
                 }, label: {
@@ -64,7 +61,6 @@ struct LoginView: View {
                 })
                 .padding(.vertical)
                 
-                //sign in facebook
                 HStack {
                     Rectangle()
                         .frame(width: ((UIScreen.current?.bounds.width)! / 2) - 40, height: 0.5)

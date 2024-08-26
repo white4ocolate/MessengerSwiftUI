@@ -10,10 +10,11 @@ import PhotosUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    
     let user: User
+    
     var body: some View {
         VStack {
-            //header
             VStack {
                 PhotosPicker(selection: $viewModel.selectedItem) {
                     ZStack(alignment: .bottomTrailing) {
@@ -41,9 +42,9 @@ struct ProfileView: View {
                     .fontWeight(.semibold)
             }
             
-            //list
             List {
                 Section {
+                    ModeView()
                     ForEach(SettingsOptionsViewModel.allCases) { option in
                         HStack {
                             Image(systemName: option.imageName)
@@ -52,16 +53,17 @@ struct ProfileView: View {
                                 .foregroundStyle(option.imageBackgroundColor)
                             Text(option.title)
                                 .font(.subheadline)
+                                .foregroundStyle(Color(.systemGray2))
                         }
                     }
                 }
                 
                 Section {
                     Button("Log Out") {
-                        AuthService.shared.signOut()
+                        try? AuthService.shared.signOut()
                     }
                     Button("Delete Account") {
-                        print("Delete Account")
+                        AuthService.shared.deleteAccount()
                     }
                 }
                 .foregroundStyle(.red)

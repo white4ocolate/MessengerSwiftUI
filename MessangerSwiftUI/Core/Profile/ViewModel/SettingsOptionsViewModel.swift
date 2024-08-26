@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
-    case darkMode
     case activeStatus
     case accessibility
     case privacy
@@ -17,8 +16,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     
     var title: String {
         switch self {
-        case .darkMode:
-            return "Dark mode"
         case .activeStatus:
             return "Active status"
         case .accessibility:
@@ -32,8 +29,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     
     var imageName: String {
         switch self {
-        case .darkMode:
-            return "moon.circle.fill"
         case .activeStatus:
             return "message.badge.circle.fill"
         case .accessibility:
@@ -47,16 +42,14 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     
     var imageBackgroundColor: Color {
         switch self {
-        case .darkMode:
-            return Color(.black)
         case .activeStatus:
-            return Color(.systemGreen)
+            return Color(.systemGray2)
         case .accessibility:
-            return Color(.black)
+            return Color(.systemGray2)
         case .privacy:
-            return Color(.systemBlue)
+            return Color(.systemGray2)
         case .notifications:
-            return Color(.systemPurple)
+            return Color(.systemGray2)
         }
     }
     

@@ -62,4 +62,27 @@ class AuthService {
             try await UserService.shared.fetchCurrentUser()
         }
     }
+    
+    func deleteUserData() async throws {
+        guard let uid = Auth.auth().currentUser?.uid else {
+            throw NSError(domain: "User ID not found", code: 0, userInfo: nil)
+        }
+        let db = Firestore.firestore()
+        try await db.collection("users").document(uid).delete()
+    }
+    
+    func deleteUserAccount() async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw NSError(domain: "No current user", code: 0, userInfo: nil)
+        }
+        try await user.delete()
+    }
+    
+    func deleteAccount() {
+        Task {
+            try await deleteUserData()
+            try await deleteUserAccount()
+        }
+        signOut()
+    }
 }

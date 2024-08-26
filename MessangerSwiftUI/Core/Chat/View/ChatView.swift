@@ -57,7 +57,7 @@ struct ChatView: View {
                     TextField("Message...", text: $viewModel.messageText, axis: .vertical)
                         .padding(7)
                         .padding(.trailing, 35)
-                        .background(Color(.systemGroupedBackground))
+                        .background(Color(.systemGray5))
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .font(.subheadline)
                     Button {

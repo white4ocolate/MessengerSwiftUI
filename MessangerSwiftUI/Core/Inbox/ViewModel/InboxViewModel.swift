@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import Firebase
 
+@MainActor
 class InboxViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var lastmessages = [Message]()
@@ -42,7 +43,6 @@ class InboxViewModel: ObservableObject {
                 }) {
                     self.lastmessages.remove(at: existId)
                 }
-                
                 self.lastmessages.insert(messages[index], at: 0)
             }
         }

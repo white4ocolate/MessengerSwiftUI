@@ -23,7 +23,6 @@ struct SignUpView: View {
                 .frame(width: 150, height: 150)
                 .padding()
             
-            //text fields
             VStack(spacing: 12) {
                 TextField("Enter your email", text: $viewModel.email)
                     .font(.subheadline)
@@ -45,7 +44,6 @@ struct SignUpView: View {
                     .padding(.horizontal, 24)
             }
             
-            //login button
             Button(action: {
                 Task { try await viewModel.createUser() }
             }, label: {

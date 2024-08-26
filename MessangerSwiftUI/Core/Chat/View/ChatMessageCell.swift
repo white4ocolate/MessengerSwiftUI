@@ -30,8 +30,8 @@ struct ChatMessageCell: View {
                 Text(message.messageText)
                     .font(.subheadline)
                     .padding(12)
-                    .background(Color(.systemGray6))
-                    .foregroundStyle(.black)
+                    .background(Color(.systemGray4))
+                    .foregroundStyle(Color("foregroundColor"))
                     .clipShape(MessageBubble(isFromCurrentUser: isFromCurrentUser))
                     .frame(maxWidth: ((UIScreen.current?.bounds.width)!) / 1.2, alignment: .leading)
                 

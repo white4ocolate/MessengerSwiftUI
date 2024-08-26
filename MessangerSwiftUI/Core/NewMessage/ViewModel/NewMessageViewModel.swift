@@ -17,7 +17,6 @@ class NewMessageViewModel: ObservableObject {
         Task {
             try await fetchAllUsers()
         }
-        
     }
     
     @MainActor

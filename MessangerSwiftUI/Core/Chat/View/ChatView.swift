@@ -23,7 +23,7 @@ struct ChatView: View {
                 Button {
                     dismiss()
                 } label: {
-                     Image(systemName: "lessthan")
+                    Image(systemName: "lessthan")
                         .resizable()
                         .frame(width: 13, height: 20)
                 }
@@ -45,10 +45,23 @@ struct ChatView: View {
                 CircularProfileImageView(user: user, size: .s)
             }
             .padding(8)
-             
-            ScrollView {
-                ForEach(viewModel.messages) { message in
-                    ChatMessageCell(message: message)
+            
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack{
+                        ForEach(viewModel.messages) { message in
+                            ChatMessageCell(message: message)
+                                .id(message.id)
+                        }
+                    }
+                    .onChange(of: viewModel.messages.count) { _ in
+                        // Прокрутка к последнему сообщению
+                        if let lastMessage = viewModel.messages.last {
+                            withAnimation {
+                                proxy.scrollTo(lastMessage.id, anchor: .bottom)
+                            }
+                        }
+                    }
                 }
             }
             

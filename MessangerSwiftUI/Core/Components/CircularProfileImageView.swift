@@ -33,11 +33,23 @@ struct CircularProfileImageView: View {
     
     var body: some View {
         if let imageUrl = user?.profileImageUrl {
-            Image(imageUrl)
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.dimension, height: size.dimension)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            AsyncImage(url: URL(string: imageUrl)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: size.dimension, height: size.dimension)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                case .failure(let error):
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: size.dimension, height: size.dimension)
+                        .foregroundStyle(Color("avatarColor"))
+                }
+            }
         } else {
             Image(systemName: "person.circle.fill")
                 .resizable()

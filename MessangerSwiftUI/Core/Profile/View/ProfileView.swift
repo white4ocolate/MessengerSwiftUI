@@ -44,7 +44,7 @@ struct ProfileView: View {
             
             List {
                 Section {
-                    ModeView()
+                    ThemeView()
                     ForEach(SettingsOptionsViewModel.allCases) { option in
                         HStack {
                             Image(systemName: option.imageName)

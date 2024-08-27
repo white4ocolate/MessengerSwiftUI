@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ModeView: View {
+struct ThemeView: View {
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     var body: some View {
         Button(action: {
@@ -37,5 +37,5 @@ struct ModeView: View {
 }
 
 #Preview {
-    ModeView()
+    ThemeView()
 }

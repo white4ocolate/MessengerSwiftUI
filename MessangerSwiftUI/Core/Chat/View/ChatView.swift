@@ -55,7 +55,7 @@ struct ChatView: View {
                         }
                     }
                     .onChange(of: viewModel.messages.count) { _ in
-                        // Прокрутка к последнему сообщению
+                        // scroll to last message
                         if let lastMessage = viewModel.messages.last {
                             withAnimation {
                                 proxy.scrollTo(lastMessage.id, anchor: .bottom)
@@ -73,15 +73,6 @@ struct ChatView: View {
                         .background(Color(.systemGray5))
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .font(.subheadline)
-                    Button {
-                        print("show smile")
-                    } label: {
-                        Image(systemName: "face.smiling")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .foregroundStyle(Color(.systemGray))
-                    }
-                    .padding(5)
                 }
                 Button {
                     viewModel.sendMessage()
